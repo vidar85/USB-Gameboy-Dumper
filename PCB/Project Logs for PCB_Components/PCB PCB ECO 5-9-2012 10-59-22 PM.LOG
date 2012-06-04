@@ -1,0 +1,87 @@
+Removed Pin From Net: NetName=GND Pin=U1-6
+Removed Pin From Net: NetName=VCC Pin=U1-7
+Removed Pin From Net: NetName=VCC Pin=U1-28
+Removed Pin From Net: NetName=GND Pin=U1-29
+Added Component: Designator=C2(6-0805_N)
+Added Component: Designator=C3(6-0805_N)
+Added Component: Designator=C4(6-0805_N)
+Added Component: Designator=R1(6-0805_N -RES)
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=OSC2 Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=OSC1 Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=VCC Pin=C4-2
+Added Pin To Net: NetName=MCLR Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=VCC Pin=U1-6
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=GND Pin=U1-28
+Added Pin To Net: NetName=VCC Pin=U1-29
+Added Pin To Net: NetName=!RD Pin=P1-4
+Added Net: Name=!RD
+Added Pin To Net: NetName=!RST Pin=P1-30
+Added Net: Name=!RST
+Added Pin To Net: NetName=!WR Pin=P1-3
+Added Net: Name=!WR
+Added Pin To Net: NetName=A0 Pin=P1-6
+Added Net: Name=A0
+Added Pin To Net: NetName=A1 Pin=P1-7
+Added Net: Name=A1
+Added Pin To Net: NetName=A2 Pin=P1-8
+Added Net: Name=A2
+Added Pin To Net: NetName=A3 Pin=P1-9
+Added Net: Name=A3
+Added Pin To Net: NetName=A4 Pin=P1-10
+Added Net: Name=A4
+Added Pin To Net: NetName=A5 Pin=P1-11
+Added Net: Name=A5
+Added Pin To Net: NetName=A6 Pin=P1-12
+Added Net: Name=A6
+Added Pin To Net: NetName=A7 Pin=P1-13
+Added Net: Name=A7
+Added Pin To Net: NetName=A8 Pin=P1-14
+Added Net: Name=A8
+Added Pin To Net: NetName=A9 Pin=P1-15
+Added Net: Name=A9
+Added Pin To Net: NetName=A10 Pin=P1-16
+Added Net: Name=A10
+Added Pin To Net: NetName=A11 Pin=P1-17
+Added Net: Name=A11
+Added Pin To Net: NetName=A12 Pin=P1-18
+Added Net: Name=A12
+Added Pin To Net: NetName=A13 Pin=P1-19
+Added Net: Name=A13
+Added Pin To Net: NetName=A14 Pin=P1-20
+Added Net: Name=A14
+Added Pin To Net: NetName=A15 Pin=P1-21
+Added Net: Name=A15
+Added Pin To Net: NetName=D0 Pin=P1-22
+Added Net: Name=D0
+Added Pin To Net: NetName=D1 Pin=P1-23
+Added Pin To Net: NetName=D1 Pin=U1-4
+Added Net: Name=D1
+Added Pin To Net: NetName=D2 Pin=P1-24
+Added Pin To Net: NetName=D2 Pin=U1-3
+Added Net: Name=D2
+Added Pin To Net: NetName=D3 Pin=P1-25
+Added Pin To Net: NetName=D3 Pin=U1-2
+Added Net: Name=D3
+Added Pin To Net: NetName=D4 Pin=P1-26
+Added Pin To Net: NetName=D4 Pin=U1-41
+Added Net: Name=D4
+Added Pin To Net: NetName=D5 Pin=P1-27
+Added Pin To Net: NetName=D5 Pin=U1-40
+Added Net: Name=D5
+Added Pin To Net: NetName=D6 Pin=P1-28
+Added Pin To Net: NetName=D6 Pin=U1-39
+Added Net: Name=D6
+Added Pin To Net: NetName=D7 Pin=P1-29
+Added Pin To Net: NetName=D7 Pin=U1-38
+Added Net: Name=D7
+Added Member To Class: ClassName=Sheet1 Member=Component C2 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C4 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component R1 Res2

@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC Pin=C3-2
+Change Component Footprint: Designator=D115 Old Footprint=6-0805_M New Footprint=6-0805_N -GREEN
+Change Component Footprint: Designator=D115 Old Footprint=6-0805_M New Footprint=6-0805_N -RED
+Change Component Designator: OldDesignator=D115 NewDesignator=D1
+Change Component Designator: OldDesignator=D115 NewDesignator=D2
+Added Component: Designator=C3(6-0805_N)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Change Net Name : Old Net Name=NetD115_1 New Net Name=NetD1_1
+Added Pin To Net: NetName=NetD2_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_1 Pin=R3-1
+Added Net: Name=NetD2_1
+Added Member To Class: ClassName=Sheet1 Member=Component D1 LED0

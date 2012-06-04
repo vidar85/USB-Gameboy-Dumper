@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=VCC Pin=C5-1
+Change Component Designator: OldDesignator=C5 NewDesignator=C6
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=VUSB Pin=C6-1
+Added Member To Class: ClassName=Sheet1 Member=Component C6 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component R2 Res2

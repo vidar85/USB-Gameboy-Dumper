@@ -1,0 +1,4 @@
+Added Component: Designator=C1(6-0805_M)
+Change Net Name : Old Net Name=D+ New Net Name=D+_P
+Change Net Name : Old Net Name=D- New Net Name=D-_N
+Added Member To Class: ClassName=Sheet1 Member=Component C1 Cap

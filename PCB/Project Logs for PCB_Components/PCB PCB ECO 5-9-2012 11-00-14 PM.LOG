@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC Pin=C3-2
+Removed Pin From Net: NetName=D3 Pin=U1-2
+Removed Pin From Net: NetName=D2 Pin=U1-3
+Removed Pin From Net: NetName=D1 Pin=U1-4
+Removed Pin From Net: NetName=PGC Pin=U1-16
+Removed Pin From Net: NetName=PGD Pin=U1-17
+Removed Pin From Net: NetName=D7 Pin=U1-38
+Removed Pin From Net: NetName=D6 Pin=U1-39
+Removed Pin From Net: NetName=D5 Pin=U1-40
+Removed Pin From Net: NetName=D4 Pin=U1-41
+Added Component: Designator=C3(6-0805_N)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=D7 Pin=U1-8
+Added Pin To Net: NetName=D6 Pin=U1-9
+Added Pin To Net: NetName=D5 Pin=U1-10
+Added Pin To Net: NetName=D4 Pin=U1-11
+Added Pin To Net: NetName=D3 Pin=U1-14
+Added Pin To Net: NetName=D2 Pin=U1-15
+Added Pin To Net: NetName=D1 Pin=U1-16
+Added Pin To Net: NetName=D0 Pin=U1-17

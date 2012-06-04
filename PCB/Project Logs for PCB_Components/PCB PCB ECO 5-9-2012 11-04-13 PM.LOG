@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC Pin=C3-2
+Removed Pin From Net: NetName=PGD Pin=P3-4
+Removed Pin From Net: NetName=PGC Pin=P3-5
+Removed Pin From Net: NetName=D7 Pin=U1-8
+Removed Pin From Net: NetName=D6 Pin=U1-9
+Removed Pin From Net: NetName=D5 Pin=U1-10
+Removed Pin From Net: NetName=D4 Pin=U1-11
+Removed Pin From Net: NetName=D3 Pin=U1-14
+Removed Pin From Net: NetName=D2 Pin=U1-15
+Removed Pin From Net: NetName=D1 Pin=U1-16
+Removed Pin From Net: NetName=D0 Pin=U1-17
+Added Component: Designator=C3(6-0805_N)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=PGC Pin=P3-4
+Added Pin To Net: NetName=PGD Pin=P3-5
+Added Pin To Net: NetName=D0 Pin=U1-8
+Added Pin To Net: NetName=D1 Pin=U1-9
+Added Pin To Net: NetName=D2 Pin=U1-10
+Added Pin To Net: NetName=D3 Pin=U1-11
+Added Pin To Net: NetName=D4 Pin=U1-14
+Added Pin To Net: NetName=D5 Pin=U1-15
+Added Pin To Net: NetName=PGD Pin=U1-16
+Added Pin To Net: NetName=PGC Pin=U1-17
+Change Net Name : Old Net Name=PGC New Net Name=D7_PGD
+Change Net Name : Old Net Name=PGD New Net Name=D6_PGC
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap

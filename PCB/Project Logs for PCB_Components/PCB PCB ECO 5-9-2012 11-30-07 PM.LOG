@@ -1,0 +1,17 @@
+Added Component: Designator=C3(6-0805_N)
+Added Component: Designator=D115(6-0805_M)
+Added Component: Designator=D115(6-0805_M)
+Added Component: Designator=R2(6-0805_N -RES)
+Added Component: Designator=R3(6-0805_N -RES)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=GND Pin=D115-2
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=VCC Pin=R3-2
+Added Pin To Net: NetName=NetD115_1 Pin=D115-1
+Added Pin To Net: NetName=NetD115_1 Pin=R2-1
+Added Net: Name=NetD115_1
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component D115 LED0
+Added Member To Class: ClassName=Sheet1 Member=Component R2 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component R3 Res2

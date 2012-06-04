@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=VCC Pin=C6-1
+Removed Pin From Net: NetName=VUSB Pin=C6-2
+Added Pin To Net: NetName=VUSB Pin=C6-1
+Added Pin To Net: NetName=GND Pin=C6-2

@@ -1,0 +1,11 @@
+Change Component DesignItemId : Designator=U1 Old DesignItemId=PIC18F44J50-I/PT New DesignItemId=PIC18F4450-I/PT
+Change Component Footprint: Designator=U1 Old Footprint=TQFP-PT44_M New Footprint=TQFP-PT44_N
+Change Component Comment : Designator=U1 Old Comment=PIC18F44J50-I/PT New Comment=PIC18F4450-I/PT
+Added Pin To Net: NetName=VCC Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P1-32
+Added Pin To Net: NetName=GND Pin=U1-6
+Added Pin To Net: NetName=VCC Pin=U1-7
+Added Pin To Net: NetName=VCC Pin=U1-28
+Added Pin To Net: NetName=GND Pin=U1-29
+Change Net Name : Old Net Name=NetU1_30 New Net Name=OSC1
+Change Net Name : Old Net Name=NetU1_31 New Net Name=OSC2

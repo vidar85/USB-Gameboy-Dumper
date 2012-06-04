@@ -1,0 +1,13 @@
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Net: Name=GND
+Added Pin To Net: NetName=MCLR Pin=P3-1
+Added Pin To Net: NetName=MCLR Pin=U1-18
+Added Net: Name=MCLR
+Added Pin To Net: NetName=PGC Pin=P3-5
+Added Pin To Net: NetName=PGC Pin=U1-16
+Added Net: Name=PGC
+Added Pin To Net: NetName=PGD Pin=P3-4
+Added Pin To Net: NetName=PGD Pin=U1-17
+Added Net: Name=PGD
+Added Pin To Net: NetName=VCC Pin=P3-2
+Added Net: Name=VCC

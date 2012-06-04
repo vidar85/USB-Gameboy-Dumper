@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=GND Pin=C5-2
+Change Component Comment : Designator=R1 Old Comment=Res2 New Comment=10K
+Added Component: Designator=C5(6-0805_N)
+Added Component: Designator=R2(6-0805_N -RES)
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=D_P Pin=R2-1
+Added Pin To Net: NetName=VUSB Pin=C5-1
+Added Pin To Net: NetName=VUSB Pin=R2-2
+Added Pin To Net: NetName=VUSB Pin=U1-37
+Added Net: Name=VUSB

@@ -1,0 +1,101 @@
+Added Component: Designator=C1(6-0805_N)
+Added Component: Designator=C2(6-0805_N)
+Added Component: Designator=C3(6-0805_N)
+Added Component: Designator=C4(6-0805_N)
+Added Component: Designator=C5(Capacitor)
+Added Component: Designator=C5(6-0805_N)
+Added Component: Designator=D1(6-0805_N -GREEN)
+Added Component: Designator=D2(6-0805_N -RED)
+Added Component: Designator=P2(USB)
+Added Component: Designator=P3(HDR1X6)
+Added Component: Designator=R1(6-0805_N -RES)
+Added Component: Designator=R2(6-0805_N -RES)
+Added Component: Designator=R2(6-0805_N -RES)
+Added Component: Designator=R3(6-0805_N -RES)
+Added Component: Designator=U1(TQFP-PT44_N)
+Added Component: Designator=Y?(crystal)
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=OSC_N Pin=C1-2
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=OSC_P Pin=C2-2
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=VCC Pin=C4-2
+Added Pin To Net: NetName=VCC Pin=C5-1
+Added Pin To Net: NetName=VUSB Pin=C5-1
+Added Pin To Net: NetName=GND Pin=C5-2
+Added Pin To Net: NetName=NetD1_1 Pin=D1-1
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=VCC Pin=D2-1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=VCC Pin=P2-1
+Added Pin To Net: NetName=D_N Pin=P2-2
+Added Pin To Net: NetName=D_P Pin=P2-3
+Added Pin To Net: NetName=GND Pin=P2-5
+Added Pin To Net: NetName=MCLR Pin=P3-1
+Added Pin To Net: NetName=VCC Pin=P3-2
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Pin To Net: NetName=D7_PGD Pin=P3-4
+Added Pin To Net: NetName=D6_PGC Pin=P3-5
+Added Pin To Net: NetName=MCLR Pin=R1-1
+Added Pin To Net: NetName=VCC Pin=R1-2
+Added Pin To Net: NetName=D_P Pin=R2-1
+Added Pin To Net: NetName=NetD1_1 Pin=R2-1
+Added Pin To Net: NetName=VCC Pin=R2-2
+Added Pin To Net: NetName=VUSB Pin=R2-2
+Added Pin To Net: NetName=LED Pin=R3-1
+Added Pin To Net: NetName=NetD2_2 Pin=R3-2
+Added Pin To Net: NetName=A4 Pin=U1-2
+Added Pin To Net: NetName=A5 Pin=U1-3
+Added Pin To Net: NetName=A6 Pin=U1-4
+Added Pin To Net: NetName=A7 Pin=U1-5
+Added Pin To Net: NetName=VCC Pin=U1-6
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=D0 Pin=U1-8
+Added Pin To Net: NetName=D1 Pin=U1-9
+Added Pin To Net: NetName=D2 Pin=U1-10
+Added Pin To Net: NetName=D3 Pin=U1-11
+Added Pin To Net: NetName=D4 Pin=U1-14
+Added Pin To Net: NetName=D5 Pin=U1-15
+Added Pin To Net: NetName=D6_PGC Pin=U1-16
+Added Pin To Net: NetName=D7_PGD Pin=U1-17
+Added Pin To Net: NetName=MCLR Pin=U1-18
+Added Pin To Net: NetName=A15 Pin=U1-21
+Added Pin To Net: NetName=A14 Pin=U1-22
+Added Pin To Net: NetName=A13 Pin=U1-23
+Added Pin To Net: NetName=A12 Pin=U1-24
+Added Pin To Net: NetName=A11 Pin=U1-25
+Added Pin To Net: NetName=A10 Pin=U1-26
+Added Pin To Net: NetName=A9 Pin=U1-27
+Added Pin To Net: NetName=GND Pin=U1-28
+Added Pin To Net: NetName=VCC Pin=U1-29
+Added Pin To Net: NetName=OSC_N Pin=U1-30
+Added Pin To Net: NetName=OSC_P Pin=U1-31
+Added Pin To Net: NetName=A8 Pin=U1-32
+Added Pin To Net: NetName=!RD Pin=U1-35
+Added Pin To Net: NetName=!WR Pin=U1-36
+Added Pin To Net: NetName=VUSB Pin=U1-37
+Added Pin To Net: NetName=A0 Pin=U1-38
+Added Pin To Net: NetName=A1 Pin=U1-39
+Added Pin To Net: NetName=A2 Pin=U1-40
+Added Pin To Net: NetName=A3 Pin=U1-41
+Added Pin To Net: NetName=D_N Pin=U1-42
+Added Pin To Net: NetName=D_P Pin=U1-43
+Added Pin To Net: NetName=LED Pin=U1-44
+Added Pin To Net: NetName=OSC_P Pin=Y?-1
+Added Pin To Net: NetName=OSC_N Pin=Y?-2
+Added Member To Class: ClassName=Sheet1 Member=Component C1 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C2 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C4 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component C5 Cap
+Added Member To Class: ClassName=Sheet1 Member=Component D1 LED0
+Added Member To Class: ClassName=Sheet1 Member=Component D2 LED0
+Added Member To Class: ClassName=Sheet1 Member=Component P2 USB Mini-B 5-Pin
+Added Member To Class: ClassName=Sheet1 Member=Component P3 Header 6
+Added Member To Class: ClassName=Sheet1 Member=Component R1 10K
+Added Member To Class: ClassName=Sheet1 Member=Component R2 1.5K
+Added Member To Class: ClassName=Sheet1 Member=Component R3 Res2
+Added Member To Class: ClassName=Sheet1 Member=Component U1 PIC18F4450-I/PT
+Added Member To Class: ClassName=Sheet1 Member=Component Y? XTAL

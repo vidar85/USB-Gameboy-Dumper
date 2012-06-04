@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=VCC Pin=C3-2
+Added Component: Designator=C3(6-0805_N)
+Added Pin To Net: NetName=GND Pin=C3-1
+Added Pin To Net: NetName=VCC Pin=C3-2
+Change Net Name : Old Net Name=D+_P New Net Name=D_P
+Change Net Name : Old Net Name=D-_N New Net Name=D_N
+Added Differential Pair: Name=D
+Added Member To Class: ClassName=Sheet1 Member=Component C3 Cap
