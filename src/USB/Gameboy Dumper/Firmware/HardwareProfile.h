@@ -50,74 +50,62 @@
 
 #ifndef HARDWARE_PROFILE_H
 #define HARDWARE_PROFILE_H
+    /*******************************************************************/
+    /******** USB stack hardware selection options *********************/
+    /*******************************************************************/
+    //This section is the set of definitions required by the MCHPFSUSB
+    //  framework.  These definitions tell the firmware what mode it is
+    //  running in, and where it can find the results to some information
+    //  that the stack needs.
+    //These definitions are required by every application developed with
+    //  this revision of the MCHPFSUSB framework.  Please review each
+    //  option carefully and determine which options are desired/required
+    //  for your application.
 
-//#define DEMO_BOARD USER_DEFINED_BOARD
-
-#if !defined(DEMO_BOARD)
-    #if defined(__C32__)
-        #if defined(__32MX460F512L__)
-            #if defined(PIC32MX460F512L_PIM)
-                #include "HardwareProfile - PIC32MX460F512L PIM.h"
-            #elif defined(PIC32_USB_STARTER_KIT)
-                #include "HardwareProfile - PIC32 USB Starter Kit.h"
-            #endif
-        #elif defined(__32MX795F512L__)
-            #if defined(PIC32MX795F512L_PIM)
-                #include "HardwareProfile - PIC32MX795F512L PIM.h"
-            #elif defined(PIC32_USB_STARTER_KIT)
-                //PIC32 USB Starter Kit II
-                #include "HardwareProfile - PIC32 USB Starter Kit.h"
-            #endif
-        #endif
+    //The PICDEM FS USB Demo Board platform supports the USE_SELF_POWER_SENSE_IO
+    //and USE_USB_BUS_SENSE_IO features.  Uncomment the below line(s) if
+    //it is desireable to use one or both of the features.
+    //#define USE_SELF_POWER_SENSE_IO
+    #define tris_self_power     TRISAbits.TRISA2    // Input
+    #if defined(USE_SELF_POWER_SENSE_IO)
+    #define self_power          PORTAbits.RA2
+    #else
+    #define self_power          1
     #endif
 
-    #if defined(__C30__)
-        #if defined(__PIC24FJ256GB110__)
-            #include "HardwareProfile - PIC24FJ256GB110 PIM.h"
-        #elif defined(__PIC24FJ256GB210__)
-            #include "HardwareProfile - PIC24FJ256GB210 PIM.h"
-        #elif defined(__PIC24FJ256GB106__)
-            #include "HardwareProfile - PIC24F Starter Kit.h"
-        #elif defined(__PIC24FJ64GB004__)
-            #include "HardwareProfile - PIC24FJ64GB004 PIM.h"
-        #elif defined(__PIC24FJ64GB502__)
-            #include "HardwareProfile - PIC24FJ64GB502 Microstick.h"
-        #elif defined(__PIC24FJ256DA210__)
-            #include "HardwareProfile - PIC24FJ256DA210 Development Board.h"
-        #elif defined(__dsPIC33EP512MU810__)
-            #if defined(DSPIC33EP512MU810_PIM)
-                #include "HardwareProfile - dsPIC33EP512MU810 PIM.h"
-            #elif defined(DSPIC33E_STARTER_KIT)
-                #include "HardwareProfile - dsPIC33E Starter Kit.h"
-            #endif
-        #elif defined(__PIC24EP512GU810__)
-            #if defined(PIC24EP512GU810_PIM)
-                #include "HardwareProfile - PIC24EP512GU810 PIM.h"
-            #endif
-        #endif
+    //#define USE_USB_BUS_SENSE_IO
+    #define tris_usb_bus_sense  TRISAbits.TRISA1    // Input
+    #if defined(USE_USB_BUS_SENSE_IO)
+    #define USB_BUS_SENSE       PORTAbits.RA1
+    #else
+    #define USB_BUS_SENSE       1
     #endif
 
-    #if defined(__18CXX)
-        #if defined(__18F4450)
-            #include "HardwareProfile - PICDEM FSUSB.h"
-        #elif defined(__18F87J50)
-            #include "HardwareProfile - PIC18F87J50 PIM.h"
-        #elif defined(__18F14K50)
-            #include "HardwareProfile - Low Pin Count USB Development Kit.h"
-        #elif defined(__18F46J50)
-            #if defined(PIC18F_STARTER_KIT_1)
-                #include "HardwareProfile - PIC18F Starter Kit 1.h"
-            #else
-                #include "HardwareProfile - PIC18F46J50 PIM.h"
-            #endif
-        #elif defined(__18F47J53)
-            #include "HardwareProfile - PIC18F47J53 PIM.h"
-        #endif
-    #endif
-#endif
+    //Uncomment the following line to make the output HEX of this
+    //  project work with the MCHPUSB Bootloader
+    //#define PROGRAMMABLE_WITH_USB_MCHPUSB_BOOTLOADER
 
-#if !defined(DEMO_BOARD)
-    #error "Demo board not defined.  Either define DEMO_BOARD for a custom board or select the correct processor for the demo board."
-#endif
+    //Uncomment the following line to make the output HEX of this
+    //  project work with the HID Bootloader
+    #define PROGRAMMABLE_WITH_USB_HID_BOOTLOADER
+
+
+    /*******************************************************************/
+    /*******************************************************************/
+    /*******************************************************************/
+    /******** Application specific definitions *************************/
+    /*******************************************************************/
+    /*******************************************************************/
+    /*******************************************************************/
+
+    /** Board definition ***********************************************/
+    //These defintions will tell the main() function which board is
+    //  currently selected.  This will allow the application to add
+    //  the correct configuration bits as wells use the correct
+    //  initialization functions for the board.  These defitions are only
+    //  required in the stack provided demos.  They are not required in
+    //  final application design.
+    #define PICDEM_FS_USB
+    #define CLOCK_FREQ 48000000
 
 #endif  //HARDWARE_PROFILE_H
