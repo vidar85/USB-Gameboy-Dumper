@@ -8,20 +8,20 @@
         <itemPath>../../../../Microchip/Include/Compiler.h</itemPath>
         <itemPath>../../../../Microchip/Include/GenericTypeDefs.h</itemPath>
       </logicalFolder>
-      <logicalFolder name="f2" displayName="USB" projectFiles="true">
-        <itemPath>../../../../Microchip/Include/USB/usb.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_ch9.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_common.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_device.h</itemPath>
-        <itemPath>../../../../Microchip/USB/usb_device_local.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_function_generic.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal_dspic33E.h</itemPath>
-        <itemPath>../../../../Microchip/USB/usb_hal_local.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal_pic18.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal_pic24.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal_pic24E.h</itemPath>
-        <itemPath>../../../../Microchip/Include/USB/usb_hal_pic32.h</itemPath>
+      <logicalFolder name="f1" displayName="USB" projectFiles="true">
+        <itemPath>../Microchip/Include/USB/usb.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_ch9.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_common.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_device.h</itemPath>
+        <itemPath>../Microchip/USB/usb_device_local.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_function_generic.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal_dspic33E.h</itemPath>
+        <itemPath>../Microchip/USB/usb_hal_local.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal_pic18.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal_pic24.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal_pic24E.h</itemPath>
+        <itemPath>../Microchip/Include/USB/usb_hal_pic32.h</itemPath>
       </logicalFolder>
       <itemPath>../HardwareProfile.h</itemPath>
       <itemPath>../usb_config.h</itemPath>
@@ -43,9 +43,9 @@
                    displayName="Source Files"
                    projectFiles="true">
       <logicalFolder name="f1" displayName="USB" projectFiles="true">
-        <itemPath>../../../../Microchip/USB/usb_device.c</itemPath>
-        <itemPath>../../../../Microchip/USB/Generic Device Driver/usb_function_generic.c</itemPath>
-        <itemPath>../../../../Microchip/USB/usb_hal_pic24.c</itemPath>
+        <itemPath>../Microchip/USB/usb_device.c</itemPath>
+        <itemPath>../Microchip/USB/Generic Device Driver/usb_function_generic.c</itemPath>
+        <itemPath>../Microchip/USB/usb_hal_pic24.c</itemPath>
       </logicalFolder>
       <itemPath>../main.c</itemPath>
       <itemPath>../usb_descriptors.c</itemPath>
@@ -63,7 +63,7 @@
         <developmentServer>localhost</developmentServer>
         <targetDevice>PIC18F4450</targetDevice>
         <targetHeader></targetHeader>
-        <platformTool>Simulator</platformTool>
+        <platformTool>PICkit2PlatformTool</platformTool>
         <languageToolchain>C18</languageToolchain>
         <languageToolchainVersion></languageToolchainVersion>
         <platform>3</platform>
@@ -101,8 +101,7 @@
         <property key="enable-ot" value="true"/>
         <property key="enable-ou" value="true"/>
         <property key="enable-ow" value="true"/>
-        <property key="extra-include-directories"
-                  value="..;../../../../Microchip/Include"/>
+        <property key="extra-include-directories" value="..;../Microchip/Include"/>
         <property key="optimization-master" value="Enable all"/>
         <property key="preprocessor-macros" value=""/>
         <property key="procedural-abstraction-passes" value="0"/>
@@ -134,6 +133,33 @@
         <property key="stack-analysis-mplink" value="false"/>
       </C18LanguageToolchain>
       <Simulator>
+        <property key="animationupdates.realtimewatchupdates" value="false"/>
+        <property key="animationupdates.steptime" value=""/>
+        <property key="animationupdates.updatetime" value=""/>
+        <property key="breakoptions.coreerrors" value="Break"/>
+        <property key="breakoptions.corewarnings" value="Break"/>
+        <property key="breakoptions.peripheralerrors" value="Break"/>
+        <property key="breakoptions.peripheralwarnings" value="Break"/>
+        <property key="breakoptions.stimulusmessages.notes" value="Break"/>
+        <property key="breakoptions.stimulusmessags.errors" value="Break"/>
+        <property key="breakoptions.stimulusmessags.warnings" value="Break"/>
+        <property key="breakoptions.wdtwarnings" value="Break"/>
+        <property key="codecoverage.enabled" value="Disable"/>
+        <property key="codecoverage.enableoutputtofile" value="false"/>
+        <property key="codecoverage.outputfile" value=""/>
+        <property key="oscillator.auxfrequency" value="120"/>
+        <property key="oscillator.auxfrequencyunit" value="Mega"/>
+        <property key="oscillator.frequency" value="1"/>
+        <property key="oscillator.frequencyunit" value="Mega"/>
+        <property key="performancedata.show" value="false"/>
+        <property key="tracecontrol.select" value="0"/>
+        <property key="tracecontrol.timestamp" value="2"/>
+        <property key="tracecontrol.tracebufmax" value="54600"/>
+        <property key="tracecontrol.tracefile" value="C:\Users\ViDAR\mpdeftrace.log"/>
+        <property key="tracecontrol.traceresetonrun" value="false"/>
+        <property key="uart1io.output" value="window"/>
+        <property key="uart1io.outputfile" value=""/>
+        <property key="uart1io.uartioenabled" value="false"/>
       </Simulator>
     </conf>
   </confs>
