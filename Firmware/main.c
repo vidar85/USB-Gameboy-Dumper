@@ -127,9 +127,7 @@ void ProcessIO(void);
 #endif
 
 /** DECLARATIONS ***************************************************/
-#if defined(__18CXX)
-    #pragma code
-#endif
+#pragma code
 void DumpFull(void);
 void DumpLower(void);
 void writeCart(unsigned char data, unsigned short addr);
@@ -340,12 +338,12 @@ void WriteRAM(void)
 {
 
     unsigned char MBC = readCart(0x0147);
-    unsigned char RAM_Size = readCart(0x149);
+    unsigned char RAM_Size;
     unsigned char banks = 0;
     unsigned char i, z, k;
-    address = 0xA000U;
+    i = readCart(0x149);
 
-    switch(RAM_Size)
+    switch(i)
     {
         case 0x01: RAM_Size = 32; banks = 1; break;
         case 0x02: RAM_Size = 128; banks = 1; break;
@@ -356,7 +354,7 @@ void WriteRAM(void)
     for(i=0; i<banks; i++)
     {
         writeCart(i, 0x4000U);
-        address = 0xA000U;
+        setFastAddress(0xA000U);
         for(z=0; z<RAM_Size; z++)
         {
             USBGenericOutHandle = USBGenRead(USBGEN_EP_NUM,(BYTE*)&OUTPacket,USBGEN_EP_SIZE);
@@ -371,11 +369,12 @@ void WriteRAM(void)
 void DumpRAM(void)
 {
     unsigned char MBC = readCart(0x0147);
-    unsigned char RAM_Size = readCart(0x149);
+    unsigned char RAM_Size;
     unsigned char banks = 0;
     unsigned char i, z, k;
+    i = readCart(0x149);
 
-    switch(RAM_Size)
+    switch(i)
     {
         case 0x01: RAM_Size = 32; banks = 1; break;
         case 0x02: RAM_Size = 128; banks = 1; break;
