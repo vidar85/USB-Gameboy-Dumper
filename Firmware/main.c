@@ -138,6 +138,7 @@ void setFastAddress(unsigned short);
 void gameboy_init(void);
 void DumpRAM(void);
 void WriteRAM(void);
+void WriteCartFast(unsigned char data);
 void send256Chunk(void);
 
 
@@ -189,6 +190,7 @@ void ProcessIO(void)
             case 0x01: LATC |= (1<<6); INPacket[0] = readCart(0x0104); INPacket[1] = readCart(0x0105); USBGenericInHandle = USBGenWrite(1,(BYTE*)&INPacket,USBGEN_EP_SIZE); while(USBHandleBusy(USBGenericInHandle)){} break;
             case 0xDD: LATC &= ~(1<<6); setFastAddress(0x0000U); DumpFull(); LATC |= (1<<6); break;
             case 0xDA: LATC &= ~(1<<6); DumpRAM(); LATC |= (1<<6); break;
+            case 0xDB: LATC &= ~(1<<6); WriteRAM(); LATC |= (1<<6); break;
             case 0xBB: USBDeviceDetach(); Delay1KTCYx(100); INTCONbits.GIE = 0; _asm goto 0x0F5E _endasm; break;
 
         }
@@ -327,8 +329,8 @@ void gameboy_init(void)
     TRISD = 0x00;
     TRISA = 0x00;
     TRISE = 0x00;
-    LATC |= (1 << 2); //WR HIGH
-    LATC &= ~(1 << 1); //RD LOW
+    LATC |= (0x04); //WR HIGH
+    LATC &= ~(0x02); //RD LOW
 
     address = 0x0000U;
     TRISD = 0x00;
@@ -336,13 +338,14 @@ void gameboy_init(void)
 
 void WriteRAM(void)
 {
-
+    
     unsigned char MBC = readCart(0x0147);
     unsigned char RAM_Size;
     unsigned char banks = 0;
     unsigned char i, z, k;
     i = readCart(0x149);
-
+    TRISB = 0x00;
+    
     switch(i)
     {
         case 0x01: RAM_Size = 32; banks = 1; break;
@@ -354,16 +357,19 @@ void WriteRAM(void)
     for(i=0; i<banks; i++)
     {
         writeCart(i, 0x4000U);
+        LATC |= (0x02); //RD High
         setFastAddress(0xA000U);
+        TRISB = 0x00;
         for(z=0; z<RAM_Size; z++)
         {
-            USBGenericOutHandle = USBGenRead(USBGEN_EP_NUM,(BYTE*)&OUTPacket,USBGEN_EP_SIZE);
-            while(USBHandleBusy(USBGenericInHandle)){}
+            USBGenericOutHandle = USBGenRead(1,(BYTE*)&OUTPacket,USBGEN_EP_SIZE);
+            while(USBHandleBusy(USBGenericOutHandle)){}
             for(k=0; k<64U; k++)
-                writeCart(OUTPacket[k], address++);
+                WriteCartFast(OUTPacket[k]);
         }
     }
-
+    LATC &= ~(0x02); //RD LOW
+    TRISB = 0xFF;
 }
 
 void DumpRAM(void)
@@ -860,6 +866,56 @@ unsigned char readCartFast(void)
     return PORTB;
 }
 
+void WriteCartFast(unsigned char data)
+{
+    LATB = data;
+    LATD = (unsigned char) address;
+    if((unsigned char) address == 0)
+    {
+    temp = (unsigned char) (address >> 8);
+    if ((temp & 0x01) == 0x01U) //A8
+        LATC |= 0x01;
+    else
+        LATC &= ~(0x01);
+    if ((temp & 0x02) == 0x02U) //A9
+        LATE |= (0x04);
+    else
+        LATE &= ~(0x04);
+    if ((temp & 0x04) == 0x04U) //A10
+        LATE |= (0x02);
+    else
+        LATE &= ~(0x02);
+    if ((temp & 0x08) == 0x08U) //A11
+        LATE |= (0x01);
+    else
+        LATE &= ~(0x01);
+    if ((temp & 0x10) == 0x10U) //A12
+        LATA |= (0x20);
+    else
+        LATA &= ~(0x20);
+    if ((temp & 0x20) == 0x20U) //A13
+        LATA |= (0x10);
+    else
+        LATA &= ~(0x10);
+    if ((temp & 0x40) == 0x40U) //A14
+        LATA |= (0x08);
+    else
+        LATA &= ~(0x08);
+    if ((temp & 0x80) == 0x80U) //A15
+        LATA |= (0x04);
+    else
+        LATA &= ~(0x04);
+    }
+
+    LATC &= ~(0x04); //WR LOW
+    Delay10TCYx(2);
+    LATC |= (0x04); //WR HIGH
+    Delay10TCYx(2);
+    //Delay10KTCYx(1);
+    //TRISB = 0xFF;
+    address++;
+}
+
 void writeCart(unsigned char data, unsigned short addr)
 {
     unsigned short addressw = addr;
@@ -901,13 +957,13 @@ void writeCart(unsigned char data, unsigned short addr)
     else
         LATA &= ~(0x04);
 
-    Delay10KTCYx(1);
+    Delay100TCYx(100);
     LATC &= ~(0x04); //WR LOW
-    Delay10KTCYx(1);
+    Delay100TCYx(100);
     LATC |= (0x04); //WR HIGH
-    Delay10KTCYx(1);
+    Delay100TCYx(100);
     LATC &= ~(1 << 1); //RD LOW
-    Delay10KTCYx(1);
+    Delay100TCYx(100);
     TRISB = 0xFF;
     //_delay_us(1);
 }

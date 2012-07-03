@@ -1,0 +1,10 @@
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\bin\Release\Dumper.exe
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\bin\Release\Dumper.pdb
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\bin\Release\LibUsbDotNet.dll
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\Dumper.Form1.resources
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\Dumper.Properties.Resources.resources
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\Dumper.exe
+C:\Users\ViDAR\Dropbox\Project\Gameboy Dumper\Software\Dumper\Dumper\obj\x86\Release\Dumper.pdb

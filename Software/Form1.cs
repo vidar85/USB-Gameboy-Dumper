@@ -419,10 +419,13 @@ namespace Dumper
             backgroundWorker1.RunWorkerAsync();
         }
 
+
         private void WriteRAM_b_Click(object sender, EventArgs e)
         {
             timer1.Enabled = false;
+            mode = 3;
             openFileDialog1.ShowDialog();
+
         }
 
         private void saveFileDialogRAM_FileOk(object sender, CancelEventArgs e)
@@ -471,6 +474,26 @@ namespace Dumper
                     {
                         ec = reader.Read(usb_command, 1000, out actual_length);
                         Buffer.BlockCopy(usb_command, 0, RAM, i * 64, 64);
+                        backgroundWorker1.ReportProgress(i);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show((ec != ErrorCode.None ? ec + ":" : String.Empty) + ex.Message);
+                    error = true;
+                }
+            }
+            if (mode == 3)
+            {
+                usb_command[0] = 0xDB;
+                try
+                {
+                    ec = writer.Write(usb_command, 1000, out actual_length);
+                    for (int i = 0; i < ((RAM.Length) / 64); i++)
+                    {
+                        Buffer.BlockCopy(RAM, i * 64, usb_command, 0, 64);
+                        ec = writer.Write(usb_command, 1000, out actual_length);
                         backgroundWorker1.ReportProgress(i);
                     }
 
@@ -540,10 +563,12 @@ namespace Dumper
                     saveFileDialogRAM.ShowDialog();
                 timer1.Enabled = true;
             }
+            if (mode == 3)
+            {
+                timer1.Enabled = true;
+            }
             if (mode == 4)
             {
-                //String filename = "C:\\Users\\ViDAR\\Dropbox\\RM01\\dump.bin";
-                //ByteArrayToFile(filename, rom);
                 setButtons_labels();
                 timer1.Enabled = true;
             }
@@ -648,6 +673,21 @@ namespace Dumper
                 usb_command[0] = 0xBB;
                 ec = writer.Write(usb_command, 1000, out actual_length);
             }
+        }
+
+        private void button1_Click_3(object sender, EventArgs e)
+        {
+            usb_command[0] = 0xBB;
+            ec = writer.Write(usb_command, 1000, out actual_length);
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+            RAM = File.ReadAllBytes(openFileDialog1.FileName);
+            progressBar1.Maximum = RAM.Length / 64;
+            progressBar1.Value = 0;
+            label1.Text = RAM.Length.ToString();
+            backgroundWorker1.RunWorkerAsync();
         }
     }
 }
